@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.actions.act_window" id="course_list_action">
+        <field name="name">Courses</field>
+        <field name="res_model">openacademy.course</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first course
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="main_openacademy_menu" groups="group_openacademy_manager" name="Open Academy"/>
+    <menuitem id="openacademy_menu" groups="group_openacademy_manager" name="Open Academy" parent="main_openacademy_menu"/>
+    <menuitem id="courses_menu" groups="group_openacademy_manager" name="Courses" parent="openacademy_menu" action="course_list_action"/>
+<!--    <menuitem name="Open Academy" id="main_openacademy_menu"-->
+<!--        action="action_menu_perf_app_rel"/>-->
+</odoo>
